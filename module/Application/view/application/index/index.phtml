@@ -1,0 +1,41 @@
+<div class="jumbotron">
+    <h1>Bienvenue sur ZF-Meetup</h1>
+    <p>ZF-Meetup est un site communautaire qui vous permettra<br>de découvrir les prochains meetups de la communauté Zend !</p>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-offset-1 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Voir les meetups</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <a class="btn btn-primary btn-block" href="<?= $this->url('meetup') ?>">
+                        <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+                        Liste des meetups
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-offset-2 col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Ajouter un meetup</h3>
+            </div>
+            <div class="panel-body">
+                <p>
+                    <a class="btn btn-success btn-block" href="/meetup/add">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        Ajouter un nouveau meetup
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,26 @@
+<h1>Meetups à venir</h1>
+
+<?php
+if (count($meetups) === 0) {
+    echo 'Aucun meetup à venir.';
+} else {
+    echo '<ul class="meetups">';
+    foreach ($meetups as $meetup): ?>
+        <li class="panel panel-default">
+            <div class="title panel-heading">
+                <h3 class="panel-title pull-left"><?= $meetup->title ?></h3>
+                <div class="actions text-right">
+                    <span class="edit"><a href="/meetup/edit/<?= $meetup->id ?>" class="glyphicon glyphicon-pencil"></a></span>
+                    <span class="delete"><a href="/meetup/delete/<?= $meetup->id ?>">X</a></span>
+                </div>
+            </div>
+            <div class="description panel-body"><?= $meetup->description ?></div>
+            <div class="dates panel-footer text-right">
+                Du <span class="dateStart"><?= $meetup->date_start ?></span>
+                au <span class="dateEnd"><?= $meetup->date_end ?></span>
+            </div>
+        </li>
+    <? endforeach;
+    echo '</ul>';
+}
+?>
